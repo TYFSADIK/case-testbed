@@ -1,0 +1,15 @@
+[out:json][timeout:120];
+(
+  way["building"](44.372,-79.705,44.398,-79.665);
+  way["highway"~"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|motorway_link|primary_link|secondary_link|service)$"](44.372,-79.705,44.398,-79.665);
+  way["natural"="water"](44.35,-79.72,44.41,-79.60);
+  relation["natural"="water"](44.35,-79.72,44.41,-79.60);
+  way["waterway"](44.372,-79.705,44.398,-79.665);
+  node["power"~"substation|tower"](44.372,-79.705,44.398,-79.665);
+  way["power"="substation"](44.372,-79.705,44.398,-79.665);
+  way["man_made"~"water_tower|wastewater_plant|water_works"](44.372,-79.705,44.398,-79.665);
+  way["amenity"~"hospital|fire_station|police|school"](44.372,-79.705,44.398,-79.665);
+  node["amenity"~"hospital|fire_station|police"](44.372,-79.705,44.398,-79.665);
+  way["bridge"="yes"](44.372,-79.705,44.398,-79.665);
+);
+out body; >; out skel qt;

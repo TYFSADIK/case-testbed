@@ -1,0 +1,9 @@
+{
+ "chain_ok": true,
+ "records": 466497,
+ "chain": "ok",
+ "alerts_live": 143,
+ "alerts_replayed": 143,
+ "identical": true,
+ "replay_seconds": 13.9
+}

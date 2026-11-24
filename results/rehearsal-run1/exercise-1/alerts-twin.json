@@ -1,0 +1,848 @@
+[
+ {
+  "op": "open",
+  "t": 2280.0,
+  "id": "fault:aq-05",
+  "kind": "fault",
+  "cls": "stuck",
+  "t_open": 2280.0,
+  "t_last": 2280.0,
+  "closed": null,
+  "sensors": [
+   "aq-05"
+  ],
+  "reason": "flat +3.0; neighbours normal",
+  "xy": [
+   400.9,
+   -1276.7
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 3180.0,
+  "id": "anomaly:br-01",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 3180.0,
+  "t_last": 3180.0,
+  "closed": null,
+  "sensors": [
+   "br-01"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -1487.4,
+   843.0
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 3180.0,
+  "id": "fault:tc-07",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 3180.0,
+  "t_last": 3180.0,
+  "closed": null,
+  "sensors": [
+   "tc-07"
+  ],
+  "reason": "spike +15.6; neighbours normal",
+  "xy": [
+   -1564.8,
+   -341.3
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 3360.0,
+  "id": "anomaly:wl-03",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 3360.0,
+  "t_last": 3360.0,
+  "closed": null,
+  "sensors": [
+   "wl-03"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   1549.3,
+   944.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 3600.0,
+  "id": "anomaly:br-01",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 3180.0,
+  "t_last": 3540.0,
+  "closed": 3600.0,
+  "sensors": [
+   "br-01"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -1487.4,
+   843.0
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 3600.0,
+  "id": "fault:br-01",
+  "kind": "fault",
+  "cls": "drift",
+  "t_open": 3600.0,
+  "t_last": 3600.0,
+  "closed": null,
+  "sensors": [
+   "br-01"
+  ],
+  "reason": "z local +13.7; neighbours normal",
+  "xy": [
+   -1487.4,
+   843.0
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 3780.0,
+  "id": "anomaly:wl-03",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 3360.0,
+  "t_last": 3720.0,
+  "closed": 3780.0,
+  "sensors": [
+   "wl-03"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   1549.3,
+   944.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 3780.0,
+  "id": "fault:wl-03",
+  "kind": "fault",
+  "cls": "drift",
+  "t_open": 3780.0,
+  "t_last": 3780.0,
+  "closed": null,
+  "sensors": [
+   "wl-03"
+  ],
+  "reason": "z local +9.2; neighbours normal",
+  "xy": [
+   1549.3,
+   944.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 3840.0,
+  "id": "event:storm:7",
+  "kind": "event",
+  "cls": "storm",
+  "t_open": 3840.0,
+  "t_last": 3840.0,
+  "closed": null,
+  "sensors": [
+   "wx-1",
+   "wx-2",
+   "wx-3",
+   "wx-4"
+  ],
+  "reason": "rain over 5 mm/h at 4 stations",
+  "xy": [
+   -753.9,
+   -323.2
+  ],
+  "radius": 1494.8,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 3960.0,
+  "id": "fault:tc-07",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 3180.0,
+  "t_last": 3720.0,
+  "closed": 3960.0,
+  "sensors": [
+   "tc-07"
+  ],
+  "reason": "spike +15.6; neighbours normal",
+  "xy": [
+   -1564.8,
+   -341.3
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 4380.0,
+  "id": "fault:aq-12",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 4380.0,
+  "t_last": 4380.0,
+  "closed": null,
+  "sensors": [
+   "aq-12"
+  ],
+  "reason": "spike +7.5; neighbours normal",
+  "xy": [
+   -949.0,
+   -340.7
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 5100.0,
+  "id": "fault:aq-05",
+  "kind": "fault",
+  "cls": "stuck",
+  "t_open": 2280.0,
+  "t_last": 4860.0,
+  "closed": 5100.0,
+  "sensors": [
+   "aq-05"
+  ],
+  "reason": "flat +3.0; neighbours normal",
+  "xy": [
+   400.9,
+   -1276.7
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 5640.0,
+  "id": "event:flood:9",
+  "kind": "event",
+  "cls": "flood",
+  "t_open": 5640.0,
+  "t_last": 5640.0,
+  "closed": null,
+  "sensors": [
+   "wl-04",
+   "wl-07",
+   "wl-10",
+   "wl-12"
+  ],
+  "reason": "4 water level sensors rising together",
+  "xy": [
+   -113.7,
+   279.3
+  ],
+  "radius": 640.3,
+  "detail": {
+   "sign": -1
+  }
+ },
+ {
+  "op": "close",
+  "t": 5760.0,
+  "id": "fault:aq-12",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 4380.0,
+  "t_last": 5520.0,
+  "closed": 5760.0,
+  "sensors": [
+   "aq-12"
+  ],
+  "reason": "spike +7.5; neighbours normal",
+  "xy": [
+   -949.0,
+   -340.7
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 6060.0,
+  "id": "fault:wl-08",
+  "kind": "fault",
+  "cls": "offline",
+  "t_open": 6060.0,
+  "t_last": 6060.0,
+  "closed": null,
+  "sensors": [
+   "wl-08"
+  ],
+  "reason": "no data, no outage to explain it",
+  "xy": [
+   424.1,
+   -1153.6
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 6240.0,
+  "id": "fault:br-01",
+  "kind": "fault",
+  "cls": "drift",
+  "t_open": 3600.0,
+  "t_last": 6000.0,
+  "closed": 6240.0,
+  "sensors": [
+   "br-01"
+  ],
+  "reason": "z local +13.7; neighbours normal",
+  "xy": [
+   -1487.4,
+   843.0
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "update",
+  "t": 6360.0,
+  "id": "event:flood:9",
+  "kind": "event",
+  "cls": "flood",
+  "t_open": 5640.0,
+  "t_last": 6360.0,
+  "closed": null,
+  "sensors": [
+   "wl-04",
+   "wl-07",
+   "wl-10",
+   "wl-11",
+   "wl-12"
+  ],
+  "reason": "4 water level sensors rising together",
+  "xy": [
+   -188.7,
+   76.6
+  ],
+  "radius": 1014.4,
+  "detail": {
+   "sign": -1
+  }
+ },
+ {
+  "op": "open",
+  "t": 6660.0,
+  "id": "fault:wl-04",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 6660.0,
+  "t_last": 6660.0,
+  "closed": null,
+  "sensors": [
+   "wl-04"
+  ],
+  "reason": "spike +33.1; neighbours normal",
+  "xy": [
+   -66.7,
+   639.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 6660.0,
+  "id": "event:storm:7",
+  "kind": "event",
+  "cls": "storm",
+  "t_open": 3840.0,
+  "t_last": 6300.0,
+  "closed": 6660.0,
+  "sensors": [
+   "wx-1",
+   "wx-2",
+   "wx-3",
+   "wx-4"
+  ],
+  "reason": "rain over 5 mm/h at 4 stations",
+  "xy": [
+   -753.9,
+   -323.2
+  ],
+  "radius": 1494.8,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 8040.0,
+  "id": "anomaly:aq-13",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 8040.0,
+  "t_last": 8040.0,
+  "closed": null,
+  "sensors": [
+   "aq-13"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -480.8,
+   -338.3
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 8040.0,
+  "id": "fault:wl-03",
+  "kind": "fault",
+  "cls": "drift",
+  "t_open": 3780.0,
+  "t_last": 7800.0,
+  "closed": 8040.0,
+  "sensors": [
+   "wl-03"
+  ],
+  "reason": "z local +9.2; neighbours normal",
+  "xy": [
+   1549.3,
+   944.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 8040.0,
+  "id": "fault:wl-08",
+  "kind": "fault",
+  "cls": "offline",
+  "t_open": 6060.0,
+  "t_last": 7800.0,
+  "closed": 8040.0,
+  "sensors": [
+   "wl-08"
+  ],
+  "reason": "no data, no outage to explain it",
+  "xy": [
+   424.1,
+   -1153.6
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 8220.0,
+  "id": "event:plume:13",
+  "kind": "event",
+  "cls": "plume",
+  "t_open": 8220.0,
+  "t_last": 8220.0,
+  "closed": null,
+  "sensors": [
+   "aq-19",
+   "aq-24"
+  ],
+  "reason": "2 air quality sensors rising together",
+  "xy": [
+   -32.1,
+   774.3
+  ],
+  "radius": 375.5,
+  "detail": {
+   "sign": 1
+  }
+ },
+ {
+  "op": "close",
+  "t": 8220.0,
+  "id": "anomaly:aq-13",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 8040.0,
+  "t_last": 8160.0,
+  "closed": 8220.0,
+  "sensors": [
+   "aq-13"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -480.8,
+   -338.3
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "update",
+  "t": 8220.0,
+  "id": "event:plume:13",
+  "kind": "event",
+  "cls": "plume",
+  "t_open": 8220.0,
+  "t_last": 8220.0,
+  "closed": null,
+  "sensors": [
+   "aq-13",
+   "aq-19",
+   "aq-24"
+  ],
+  "reason": "2 air quality sensors rising together",
+  "xy": [
+   -32.1,
+   774.3
+  ],
+  "radius": 375.5,
+  "detail": {
+   "sign": 1
+  }
+ },
+ {
+  "op": "open",
+  "t": 8580.0,
+  "id": "fault:aq-20",
+  "kind": "fault",
+  "cls": "stuck",
+  "t_open": 8580.0,
+  "t_last": 8580.0,
+  "closed": null,
+  "sensors": [
+   "aq-20"
+  ],
+  "reason": "flat +3.0; neighbours normal",
+  "xy": [
+   461.5,
+   537.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "update",
+  "t": 8640.0,
+  "id": "event:plume:13",
+  "kind": "event",
+  "cls": "plume",
+  "t_open": 8220.0,
+  "t_last": 8640.0,
+  "closed": null,
+  "sensors": [
+   "aq-13",
+   "aq-18",
+   "aq-19",
+   "aq-24"
+  ],
+  "reason": "2 air quality sensors rising together",
+  "xy": [
+   -258.7,
+   442.2
+  ],
+  "radius": 961.5,
+  "detail": {
+   "sign": 1
+  }
+ },
+ {
+  "op": "close",
+  "t": 9420.0,
+  "id": "fault:wl-04",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 6660.0,
+  "t_last": 9180.0,
+  "closed": 9420.0,
+  "sensors": [
+   "wl-04"
+  ],
+  "reason": "spike +33.1; neighbours normal",
+  "xy": [
+   -66.7,
+   639.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 10200.0,
+  "id": "event:plume:13",
+  "kind": "event",
+  "cls": "plume",
+  "t_open": 8220.0,
+  "t_last": 9840.0,
+  "closed": 10200.0,
+  "sensors": [
+   "aq-13",
+   "aq-18",
+   "aq-19",
+   "aq-24"
+  ],
+  "reason": "2 air quality sensors rising together",
+  "xy": [
+   -325.5,
+   256.8
+  ],
+  "radius": 961.5,
+  "detail": {
+   "sign": 1
+  }
+ },
+ {
+  "op": "close",
+  "t": 10740.0,
+  "id": "event:flood:9",
+  "kind": "event",
+  "cls": "flood",
+  "t_open": 5640.0,
+  "t_last": 10380.0,
+  "closed": 10740.0,
+  "sensors": [
+   "wl-04",
+   "wl-07",
+   "wl-10",
+   "wl-11",
+   "wl-12"
+  ],
+  "reason": "4 water level sensors rising together",
+  "xy": [
+   -288.8,
+   25.7
+  ],
+  "radius": 1014.4,
+  "detail": {
+   "sign": -1
+  }
+ },
+ {
+  "op": "open",
+  "t": 10860.0,
+  "id": "outage:substation-1416868021",
+  "kind": "event",
+  "cls": "outage",
+  "t_open": 10860.0,
+  "t_last": 10860.0,
+  "closed": null,
+  "sensors": [
+   "aq-08",
+   "aq-11",
+   "aq-12",
+   "aq-14",
+   "aq-15",
+   "aq-16",
+   "pl-1416868021",
+   "tc-07",
+   "tc-19",
+   "tc-20",
+   "tc-22",
+   "tc-30",
+   "tc-33",
+   "tc-40"
+  ],
+  "reason": "14 mains-powered sensors silent",
+  "xy": [
+   -1182.4,
+   -121.3
+  ],
+  "radius": 896.2,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 11100.0,
+  "id": "fault:aq-20",
+  "kind": "fault",
+  "cls": "stuck",
+  "t_open": 8580.0,
+  "t_last": 10860.0,
+  "closed": 11100.0,
+  "sensors": [
+   "aq-20"
+  ],
+  "reason": "flat +3.0; neighbours normal",
+  "xy": [
+   461.5,
+   537.9
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 12360.0,
+  "id": "outage:substation-1416868021",
+  "kind": "event",
+  "cls": "outage",
+  "t_open": 10860.0,
+  "t_last": 12000.0,
+  "closed": 12360.0,
+  "sensors": [
+   "aq-08",
+   "aq-11",
+   "aq-12",
+   "aq-14",
+   "aq-15",
+   "aq-16",
+   "pl-1416868021",
+   "tc-07",
+   "tc-19",
+   "tc-20",
+   "tc-22",
+   "tc-30",
+   "tc-33",
+   "tc-40"
+  ],
+  "reason": "14 mains-powered sensors silent",
+  "xy": [
+   -1182.4,
+   -121.3
+  ],
+  "radius": 896.2,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 12720.0,
+  "id": "fault:wx-2",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 12720.0,
+  "t_last": 12720.0,
+  "closed": null,
+  "sensors": [
+   "wx-2"
+  ],
+  "reason": "spike +25.7; neighbours normal",
+  "xy": [
+   -405.4,
+   -1442.1
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 13260.0,
+  "id": "fault:tc-22",
+  "kind": "fault",
+  "cls": "offline",
+  "t_open": 13260.0,
+  "t_last": 13260.0,
+  "closed": null,
+  "sensors": [
+   "tc-22"
+  ],
+  "reason": "no data, no outage to explain it",
+  "xy": [
+   -1568.4,
+   433.6
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 13560.0,
+  "id": "fault:wx-2",
+  "kind": "fault",
+  "cls": "spike",
+  "t_open": 12720.0,
+  "t_last": 13320.0,
+  "closed": 13560.0,
+  "sensors": [
+   "wx-2"
+  ],
+  "reason": "spike +25.7; neighbours normal",
+  "xy": [
+   -405.4,
+   -1442.1
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 13920.0,
+  "id": "anomaly:aq-03",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 13920.0,
+  "t_last": 13920.0,
+  "closed": null,
+  "sensors": [
+   "aq-03"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -479.4,
+   -1196.4
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "close",
+  "t": 14160.0,
+  "id": "anomaly:aq-03",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 13920.0,
+  "t_last": 13920.0,
+  "closed": 14160.0,
+  "sensors": [
+   "aq-03"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -479.4,
+   -1196.4
+  ],
+  "radius": 0.0,
+  "detail": {}
+ },
+ {
+  "op": "open",
+  "t": 14220.0,
+  "id": "anomaly:aq-03",
+  "kind": "anomaly",
+  "cls": "unexplained",
+  "t_open": 14220.0,
+  "t_last": 14220.0,
+  "closed": null,
+  "sensors": [
+   "aq-03"
+  ],
+  "reason": "rising alone; watching",
+  "xy": [
+   -479.4,
+   -1196.4
+  ],
+  "radius": 0.0,
+  "detail": {}
+ }
+]

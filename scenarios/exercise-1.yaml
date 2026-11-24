@@ -1,0 +1,24 @@
+# Exercise 1: a four-hour day on the Barrie waterfront.
+# The instructor's master scenario events list (MSEL). Times are seconds of
+# simulated time from 06:00. The first 30 minutes are normal on purpose: the
+# twin learns what normal looks like before anything happens.
+name: Exercise 1, Kempenfelt Bay
+duration: 14400
+wind_toward_deg: 15
+events:
+  - {id: E1-storm,  kind: storm,  t0: 3600,  t1: 6600,  params: {rise: 900, fall: 1200}}
+  - {id: E2-flood,  kind: flood,  t0: 5400,  t1: 9000,  at: {sensor: wl-10}, params: {radius: 650, peak: 0.75, rise: 1200, fall: 1500}}
+  - {id: E3-plume,  kind: plume,  t0: 7800,  t1: 10200, at: {asset: wastewater_plant-770907775}, params: {q: 9000000, stack: 12, rise: 600, fall: 600}}
+  - {id: E4-outage, kind: outage, t0: 10800, t1: 12000, params: {substation: substation-1416868021, rise: 0, fall: 0}}
+faults:
+  - {id: F01, sensor: aq-05, kind: stuck,   t0: 2100,  t1: 4800}
+  - {id: F02, sensor: wl-03, kind: drift,   t0: 2400,  t1: 6000,  params: {rate_per_h: 0.15}}
+  - {id: F03, sensor: tc-07, kind: spike,   t0: 2700,  t1: 3600,  params: {size: 25, prob: 0.3}}
+  - {id: F04, sensor: br-01, kind: offset,  t0: 3000,  t1: 6000,  params: {delta: 40}}
+  - {id: F05, sensor: aq-12, kind: noise,   t0: 4200,  t1: 5400,  params: {sigma: 6}}
+  - {id: F06, sensor: wl-08, kind: dropout, t0: 6000,  t1: 7800}
+  - {id: F07, sensor: wl-04, kind: replay,  t0: 6600,  t1: 9000,  params: {lag: 3000}}
+  - {id: F08, sensor: aq-20, kind: stuck,   t0: 8400,  t1: 10800}
+  - {id: F09, sensor: aq-03, kind: drift,   t0: 11400, t1: 14400, params: {rate_per_h: 8}}
+  - {id: F10, sensor: wx-2,  kind: spike,   t0: 12600, t1: 13200, params: {size: 6, prob: 0.3}}
+  - {id: F11, sensor: tc-22, kind: dropout, t0: 13200, t1: 14400}

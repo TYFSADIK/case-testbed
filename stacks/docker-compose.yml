@@ -1,0 +1,94 @@
+# CASE testbed: two training sites and the twin.
+#
+#   site_a network   site A simulation, MQTT broker, PostGIS, twin backend
+#   site_b network   site B federates (UAV + convoy, ROS 2 robot) and their DIS gateway
+#   wan network      gateway <-> twin; latency/loss is applied here with tc netem
+name: case
+
+x-py: &py
+  build: {context: .., dockerfile: stacks/Dockerfile}
+  image: case-py:latest
+  restart: unless-stopped
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.20
+    volumes: ["./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"]
+    ports: ["127.0.0.1:1883:1883"]
+    networks: [site_a]
+    restart: unless-stopped
+
+  postgis:
+    image: imresamu/postgis:16-3.4
+    environment: {POSTGRES_USER: twin, POSTGRES_PASSWORD: twin, POSTGRES_DB: twin}
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    networks: [site_a]
+    healthcheck: {test: ["CMD", "pg_isready", "-U", "twin"], interval: 3s, retries: 40}
+    restart: unless-stopped
+
+  backend:
+    <<: *py
+    command: ["uvicorn", "services.backend.main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level", "warning"]
+    environment: {MQTT_HOST: mosquitto, DATABASE_URL: "postgresql://twin:twin@postgis/twin", DATA_DIR: /data}
+    volumes: ["twin-data:/data", "dr-truth:/data/dr-truth:ro"]
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on: {postgis: {condition: service_healthy}, mosquitto: {condition: service_started}}
+    networks: [site_a, wan]
+
+  sim:
+    <<: *py
+    command: ["python", "services/sim/main.py"]
+    environment:
+      MQTT_HOST: mosquitto
+      DIS_HOST: backend
+      SPEED: ${SPEED:-1}
+      SKIP_TO: ${SKIP_TO:-0}
+      SLOW_AT: ${SLOW_AT:-inf}
+      SCENARIO: ${SCENARIO:-scenarios/exercise-1.yaml}
+      SEED: ${SEED:-1}
+      VEHICLES: ${VEHICLES:-100}
+    volumes: ["truth:/data/truth"]
+    depends_on: [backend]
+    networks: [site_a]
+
+  gateway:
+    <<: *py
+    command: ["python", "services/gateway/main.py"]
+    cap_add: [NET_ADMIN]
+    environment: {TWIN_HOST: backend}
+    depends_on: [backend]
+    networks: [site_b, wan]
+
+  siteb:
+    <<: *py
+    command: ["python", "services/siteb/main.py"]
+    environment: {GATEWAY: gateway, DR_THRESHOLD: "${DR_THRESHOLD:-1.0}", TRUTH_DIR: /data/dr-truth}
+    volumes: ["dr-truth:/data/dr-truth"]
+    networks: [site_b]
+
+  ros2:
+    build: {context: .., dockerfile: services/ros2/Dockerfile}
+    image: case-ros2:latest
+    environment: {GATEWAY: gateway, DR_THRESHOLD: "${DR_THRESHOLD:-1.0}", TRUTH_DIR: /data/dr-truth, ROS_DOMAIN_ID: "7"}
+    volumes: ["dr-truth:/data/dr-truth"]
+    networks: [site_b]
+    restart: unless-stopped
+
+  tester:
+    <<: *py
+    profiles: [test]
+    restart: "no"
+    command: ["sleep", "infinity"]
+    volumes: ["truth:/data/truth:ro", "twin-data:/data/twin:ro", "dr-truth:/data/dr-truth:ro", "../results:/results"]
+    networks: [site_a]
+
+networks:
+  site_a: {}
+  site_b: {}
+  wan: {}
+
+volumes:
+  pgdata: {}
+  twin-data: {}
+  truth: {}
+  dr-truth: {}

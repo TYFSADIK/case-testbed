@@ -1,0 +1,2 @@
+twin   alerts  19  faults 10/11 (median 180.0 s)  events 4/4 (median 240.0 s)  false faults 0  events called faults 0
+naive  alerts  53  faults 9/11 (median 300 s)  events 0/4 (median None s)  false faults 4  events called faults 36

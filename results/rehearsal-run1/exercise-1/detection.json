@@ -1,0 +1,517 @@
+{
+ "scenario_end": {
+  "type": "end",
+  "t": 14400.0,
+  "sensor_msgs": 89880,
+  "pdus": 360256
+ },
+ "backend": {
+  "uptime_s": 737,
+  "processed": 466336,
+  "dropped": 0,
+  "queue": 0,
+  "db_rows": 89880,
+  "ws_clients": 0,
+  "ws_sent": 0,
+  "counts": {
+   "mqtt": 104375,
+   "dis": 361961,
+   "inject": 0,
+   "register": 0
+  },
+  "sim_t": 14400.0,
+  "entities": 105,
+  "ingest_latency_ms": {
+   "n": 5000,
+   "p50": 1.05,
+   "p95": 2.9,
+   "p99": 6.41
+  },
+  "recording": {
+   "file": "/data/rec/session-1795483774.jsonl",
+   "records": 466479,
+   "head": "4f3beaef75ea59dbbe69a712a46a32c9291f4119d67ab00adec3ba40d606a46b"
+  }
+ },
+ "twin": {
+  "label": "twin",
+  "alerts_raised": 19,
+  "faults": {
+   "total": 11,
+   "detected": 10,
+   "median_ttd_s": 180.0,
+   "max_ttd_s": 1380,
+   "per_fault": [
+    {
+     "fault": "F01",
+     "sensor": "aq-05",
+     "kind": "stuck",
+     "detected": true,
+     "ttd_s": 180,
+     "as": "stuck"
+    },
+    {
+     "fault": "F02",
+     "sensor": "wl-03",
+     "kind": "drift",
+     "detected": true,
+     "ttd_s": 1380,
+     "as": "drift"
+    },
+    {
+     "fault": "F03",
+     "sensor": "tc-07",
+     "kind": "spike",
+     "detected": true,
+     "ttd_s": 480,
+     "as": "spike"
+    },
+    {
+     "fault": "F04",
+     "sensor": "br-01",
+     "kind": "offset",
+     "detected": true,
+     "ttd_s": 600,
+     "as": "drift"
+    },
+    {
+     "fault": "F05",
+     "sensor": "aq-12",
+     "kind": "noise",
+     "detected": true,
+     "ttd_s": 180,
+     "as": "spike"
+    },
+    {
+     "fault": "F06",
+     "sensor": "wl-08",
+     "kind": "dropout",
+     "detected": true,
+     "ttd_s": 60,
+     "as": "offline"
+    },
+    {
+     "fault": "F07",
+     "sensor": "wl-04",
+     "kind": "replay",
+     "detected": true,
+     "ttd_s": 60,
+     "as": "spike"
+    },
+    {
+     "fault": "F08",
+     "sensor": "aq-20",
+     "kind": "stuck",
+     "detected": true,
+     "ttd_s": 180,
+     "as": "stuck"
+    },
+    {
+     "fault": "F09",
+     "sensor": "aq-03",
+     "kind": "drift",
+     "detected": false,
+     "flagged_unexplained_s": 2520
+    },
+    {
+     "fault": "F10",
+     "sensor": "wx-2",
+     "kind": "spike",
+     "detected": true,
+     "ttd_s": 120,
+     "as": "spike"
+    },
+    {
+     "fault": "F11",
+     "sensor": "tc-22",
+     "kind": "dropout",
+     "detected": true,
+     "ttd_s": 60,
+     "as": "offline"
+    }
+   ]
+  },
+  "false_fault_alerts": 0,
+  "events_misreported_as_faults": 0,
+  "false_fault_detail": [],
+  "event_sensors_called_faults_detail": [],
+  "events": {
+   "total": 4,
+   "detected": 4,
+   "median_ttd_s": 240.0,
+   "per_event": [
+    {
+     "event": "E1-storm",
+     "kind": "storm",
+     "detected": true,
+     "ttd_s": 240,
+     "evidence_sensors": 4
+    },
+    {
+     "event": "E2-flood",
+     "kind": "flood",
+     "detected": true,
+     "ttd_s": 240,
+     "evidence_sensors": 4
+    },
+    {
+     "event": "E3-plume",
+     "kind": "plume",
+     "detected": true,
+     "ttd_s": 420,
+     "evidence_sensors": 2
+    },
+    {
+     "event": "E4-outage",
+     "kind": "outage",
+     "detected": true,
+     "ttd_s": 60,
+     "evidence_sensors": 14
+    }
+   ]
+  },
+  "other_event_alerts": [],
+  "watching_alerts": {
+   "total": 5,
+   "on_faulty_sensor": 4,
+   "on_event_sensor": 1,
+   "on_healthy_sensor": 0,
+   "detail": [
+    {
+     "t": 3180.0,
+     "sensor": "br-01",
+     "really": "fault"
+    },
+    {
+     "t": 3360.0,
+     "sensor": "wl-03",
+     "really": "fault"
+    },
+    {
+     "t": 8040.0,
+     "sensor": "aq-13",
+     "really": "event"
+    },
+    {
+     "t": 13920.0,
+     "sensor": "aq-03",
+     "really": "fault"
+    },
+    {
+     "t": 14220.0,
+     "sensor": "aq-03",
+     "really": "fault"
+    }
+   ]
+  }
+ },
+ "naive": {
+  "label": "naive",
+  "alerts_raised": 53,
+  "faults": {
+   "total": 11,
+   "detected": 9,
+   "median_ttd_s": 300,
+   "max_ttd_s": 2460,
+   "per_fault": [
+    {
+     "fault": "F01",
+     "sensor": "aq-05",
+     "kind": "stuck",
+     "detected": false,
+     "flagged_unexplained_s": null
+    },
+    {
+     "fault": "F02",
+     "sensor": "wl-03",
+     "kind": "drift",
+     "detected": true,
+     "ttd_s": 900,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F03",
+     "sensor": "tc-07",
+     "kind": "spike",
+     "detected": true,
+     "ttd_s": 300,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F04",
+     "sensor": "br-01",
+     "kind": "offset",
+     "detected": true,
+     "ttd_s": 120,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F05",
+     "sensor": "aq-12",
+     "kind": "noise",
+     "detected": true,
+     "ttd_s": 300,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F06",
+     "sensor": "wl-08",
+     "kind": "dropout",
+     "detected": true,
+     "ttd_s": 60,
+     "as": "offline"
+    },
+    {
+     "fault": "F07",
+     "sensor": "wl-04",
+     "kind": "replay",
+     "detected": true,
+     "ttd_s": 720,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F08",
+     "sensor": "aq-20",
+     "kind": "stuck",
+     "detected": false,
+     "flagged_unexplained_s": null
+    },
+    {
+     "fault": "F09",
+     "sensor": "aq-03",
+     "kind": "drift",
+     "detected": true,
+     "ttd_s": 2460,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F10",
+     "sensor": "wx-2",
+     "kind": "spike",
+     "detected": true,
+     "ttd_s": 180,
+     "as": "anomaly"
+    },
+    {
+     "fault": "F11",
+     "sensor": "tc-22",
+     "kind": "dropout",
+     "detected": true,
+     "ttd_s": 60,
+     "as": "offline"
+    }
+   ]
+  },
+  "false_fault_alerts": 4,
+  "events_misreported_as_faults": 36,
+  "false_fault_detail": [
+   {
+    "t": 7920.0,
+    "sensor": "wl-03",
+    "cls": "anomaly"
+   },
+   {
+    "t": 7920.0,
+    "sensor": "wl-09",
+    "cls": "anomaly"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "pl-1416868018",
+    "cls": "anomaly"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "pl-1416868027",
+    "cls": "anomaly"
+   }
+  ],
+  "event_sensors_called_faults_detail": [
+   {
+    "t": 3960.0,
+    "sensor": "wl-c1",
+    "cls": "anomaly"
+   },
+   {
+    "t": 3960.0,
+    "sensor": "wl-c2",
+    "cls": "anomaly"
+   },
+   {
+    "t": 4020.0,
+    "sensor": "wl-c3",
+    "cls": "anomaly"
+   },
+   {
+    "t": 4020.0,
+    "sensor": "wl-c4",
+    "cls": "anomaly"
+   },
+   {
+    "t": 4500.0,
+    "sensor": "wx-2",
+    "cls": "anomaly"
+   },
+   {
+    "t": 4980.0,
+    "sensor": "wx-2",
+    "cls": "anomaly"
+   },
+   {
+    "t": 5520.0,
+    "sensor": "wl-10",
+    "cls": "anomaly"
+   },
+   {
+    "t": 5580.0,
+    "sensor": "wl-04",
+    "cls": "anomaly"
+   },
+   {
+    "t": 5580.0,
+    "sensor": "wl-07",
+    "cls": "anomaly"
+   },
+   {
+    "t": 5580.0,
+    "sensor": "wl-12",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6240.0,
+    "sensor": "wl-01",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6240.0,
+    "sensor": "wl-09",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6420.0,
+    "sensor": "wl-09",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6420.0,
+    "sensor": "wl-c1",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6420.0,
+    "sensor": "wl-c2",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6420.0,
+    "sensor": "wl-c3",
+    "cls": "anomaly"
+   },
+   {
+    "t": 6480.0,
+    "sensor": "wl-c4",
+    "cls": "anomaly"
+   },
+   {
+    "t": 7980.0,
+    "sensor": "aq-13",
+    "cls": "anomaly"
+   },
+   {
+    "t": 8160.0,
+    "sensor": "aq-19",
+    "cls": "anomaly"
+   },
+   {
+    "t": 8160.0,
+    "sensor": "aq-24",
+    "cls": "anomaly"
+   },
+   {
+    "t": 8460.0,
+    "sensor": "aq-18",
+    "cls": "anomaly"
+   },
+   {
+    "t": 8580.0,
+    "sensor": "aq-18",
+    "cls": "anomaly"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "aq-08",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "aq-11",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "aq-12",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "aq-14",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "aq-15",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "aq-16",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "pl-1416868021",
+    "cls": "offline"
+   },
+   {
+    "t": 10860.0,
+    "sensor": "tc-07",
+    "cls": "offline"
+   }
+  ],
+  "events": {
+   "total": 4,
+   "detected": 0,
+   "median_ttd_s": null,
+   "per_event": [
+    {
+     "event": "E1-storm",
+     "kind": "storm",
+     "detected": false
+    },
+    {
+     "event": "E2-flood",
+     "kind": "flood",
+     "detected": false
+    },
+    {
+     "event": "E3-plume",
+     "kind": "plume",
+     "detected": false
+    },
+    {
+     "event": "E4-outage",
+     "kind": "outage",
+     "detected": false
+    }
+   ]
+  },
+  "other_event_alerts": [],
+  "watching_alerts": {
+   "total": 0,
+   "on_faulty_sensor": 0,
+   "on_event_sensor": 0,
+   "on_healthy_sensor": 0,
+   "detail": []
+  }
+ }
+}

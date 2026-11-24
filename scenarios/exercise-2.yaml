@@ -1,0 +1,21 @@
+# Exercise 2: held out. Written after the detector was tuned on exercise 1 and
+# never used for tuning: different places, wind, substation, sensors and faults.
+name: Exercise 2, east shore (held out)
+duration: 14400
+wind_toward_deg: 120
+events:
+  - {id: E1-plume,  kind: plume,  t0: 2700,  t1: 5400,  at: {asset: police-2081514337}, params: {q: 7000000, stack: 8, rise: 600, fall: 600}}
+  - {id: E2-outage, kind: outage, t0: 4800,  t1: 6000,  params: {substation: substation-1416868018, rise: 0, fall: 0}}
+  - {id: E3-storm,  kind: storm,  t0: 7200,  t1: 10800, params: {rise: 1200, fall: 1200}}
+  - {id: E4-flood,  kind: flood,  t0: 8400,  t1: 12600, at: {sensor: wl-06}, params: {radius: 600, peak: 0.6, rise: 1500, fall: 1500}}
+faults:
+  - {id: F01, sensor: wl-09, kind: offset,  t0: 2100,  t1: 4500,  params: {delta: 0.08}}
+  - {id: F02, sensor: aq-21, kind: noise,   t0: 3000,  t1: 4200,  params: {sigma: 5}}
+  - {id: F03, sensor: tc-31, kind: dropout, t0: 3300,  t1: 5100}
+  - {id: F04, sensor: br-04, kind: stuck,   t0: 6300,  t1: 8400}
+  - {id: F05, sensor: aq-08, kind: spike,   t0: 6600,  t1: 7500,  params: {size: 30, prob: 0.3}}
+  - {id: F06, sensor: wx-3,  kind: drift,   t0: 6000,  t1: 9600,  params: {rate_per_h: -3}}
+  - {id: F07, sensor: wl-12, kind: stuck,   t0: 9300,  t1: 12000}
+  - {id: F08, sensor: pl-1416868027, kind: dropout, t0: 10200, t1: 11400}
+  - {id: F09, sensor: aq-16, kind: drift,   t0: 11400, t1: 14400, params: {rate_per_h: 12}}
+  - {id: F10, sensor: tc-12, kind: spike,   t0: 12600, t1: 13800, params: {size: 25, prob: 0.3}}

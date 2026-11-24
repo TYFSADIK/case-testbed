@@ -1,0 +1,25 @@
+name: ci
+on: [push, pull_request]
+permissions: {contents: read}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt pytest pyflakes
+      - run: python -m pyflakes case services tools tests hardware/sensor_node/config.example.py
+      - run: python -m pytest -q tests
+      - name: Exercise 1 in one process (detector regression check)
+        run: |
+          python tools/offline.py --out offline.json --quiet
+          python - <<'PY'
+          import json
+          t = json.load(open("offline.json"))["twin"]
+          assert t["faults"]["detected"] >= 10 and t["events"]["detected"] == 4, t["faults"]
+          assert t["false_fault_alerts"] == 0 and t["events_misreported_as_faults"] == 0
+          print("exercise 1:", t["alerts_raised"], "alerts", t["faults"]["detected"], "faults", t["events"]["detected"], "events")
+          PY
+      - name: shellcheck
+        run: shellcheck local/rehearse.sh services/ros2/run.sh
